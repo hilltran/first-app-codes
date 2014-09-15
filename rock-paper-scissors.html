@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Scissors, Paper And Rock</title>
+
+
+<script type="text/javascript">
+var choice1 = prompt("Do you choose rock, paper or scissors?");
+var choice2 = Math.random();
+if (choice2 < 0.34) {
+	choice2 = "rock";
+} else if(choice2 <= 0.67) {
+	choice2 = "paper";
+} else {
+	choice2 = "scissors";
+}
+document.write("You: " + (choice1.toLowerCase()));
+document.write("<br />Computer: " + choice2);
+
+
+var compare = function(choice1,choice2)  {
+    if (choice1.toLowerCase() === choice2) {
+        
+       document.write("<br />The result is a tie!");
+    }
+    else if (choice1.toLowerCase() === "rock")  {
+        if (choice2 === "scissors") {
+            document.write("<br />You win with rock.");
+        }
+        else  {
+            document.write ("<br />Computer wins with paper.");
+        }
+    }
+    else if (choice1.toLowerCase() === "paper")  {
+        if (choice2 === "rock")  {
+            document.write("<br />You win with paper");
+        }
+        else  {
+            document.write("<br />Computer wins with scissors");
+        }
+    }
+        else if (choice1.toLowerCase() === "scissors")  {
+        if (choice2 === "paper")  {
+            document.write("<br />You win with scissors");
+        }
+        else  {
+            document.write("<br />Computer wins with rock");
+        }
+    }
+}
+compare(choice1,choice2);
+
+</script>
+</head>
+<body>
+</body>
+</html>
